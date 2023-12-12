@@ -48,14 +48,14 @@ namespace ZH2_IVVKCM
                          where y.Name.Contains(listStudent.Text)
                          select new
                          {
-                             x.OrderSk,
-                             y.Name,
-                             z.Title,
-                             z.Price
+                             Rendelésszám = x.OrderSk,
+                             Név = y.Name,
+                             Könyvcím = z.Title,
+                             Ár = z.Price
                          };
 
             double? összérték = (from x in listáz
-                                 select x.Price).Sum();
+                                 select x.Ár).Sum();
             textOsszertek.Text = összérték.ToString();
             dataGridView1.DataSource = listáz.ToList();
         }

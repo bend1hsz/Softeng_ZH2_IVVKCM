@@ -39,6 +39,7 @@
             // 
             // listTanulo
             // 
+            listTanulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             listTanulo.FormattingEnabled = true;
             listTanulo.ItemHeight = 15;
             listTanulo.Location = new Point(13, 98);
@@ -49,6 +50,7 @@
             // 
             // listRendelt
             // 
+            listRendelt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             listRendelt.FormattingEnabled = true;
             listRendelt.ItemHeight = 15;
             listRendelt.Location = new Point(218, 98);
@@ -67,6 +69,7 @@
             // 
             // listKonyv
             // 
+            listKonyv.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             listKonyv.FormattingEnabled = true;
             listKonyv.ItemHeight = 15;
             listKonyv.Location = new Point(510, 98);
@@ -76,6 +79,7 @@
             // 
             // textKonyv
             // 
+            textKonyv.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             textKonyv.Location = new Point(510, 60);
             textKonyv.Name = "textKonyv";
             textKonyv.Size = new Size(208, 23);
@@ -84,21 +88,25 @@
             // 
             // buttonAdd
             // 
+            buttonAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonAdd.Location = new Point(431, 124);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(73, 69);
             buttonAdd.TabIndex = 5;
             buttonAdd.Text = "+";
             buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             // 
             // buttonRemove
             // 
+            buttonRemove.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonRemove.Location = new Point(431, 373);
             buttonRemove.Name = "buttonRemove";
             buttonRemove.Size = new Size(73, 69);
             buttonRemove.TabIndex = 6;
             buttonRemove.Text = "-";
             buttonRemove.UseVisualStyleBackColor = true;
+            buttonRemove.Click += buttonRemove_Click;
             // 
             // UserControl2
             // 

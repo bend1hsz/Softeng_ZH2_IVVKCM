@@ -49,7 +49,7 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(243, 102);
             dataGridView1.Name = "dataGridView1";
@@ -68,7 +68,6 @@
             // 
             // textOsszertek
             // 
-            textOsszertek.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textOsszertek.Location = new Point(372, 73);
             textOsszertek.Name = "textOsszertek";
             textOsszertek.Size = new Size(155, 23);
@@ -76,7 +75,6 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.ForeColor = Color.Fuchsia;
             label1.Location = new Point(243, 76);

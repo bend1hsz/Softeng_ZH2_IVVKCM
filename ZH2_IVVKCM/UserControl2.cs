@@ -21,8 +21,8 @@ namespace ZH2_IVVKCM
             listTanulo.DisplayMember = "Name";
             listKonyv.DisplayMember = "Title";
             listRendelt.DisplayMember = "Title";
-
             listRendelt.ValueMember = "OrderSK";
+
             TanuloListazas();
             KonyvListazas();
             RendelesListazas();
@@ -73,11 +73,43 @@ namespace ZH2_IVVKCM
 
         private void listRendelt_SelectedIndexChanged(object sender, EventArgs e)
         {
-            RendelesListazas();
+           // RendelesListazas();
         }
 
         private void listTanulo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            RendelesListazas();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Student tanulo2 = (Student)listTanulo.SelectedItem;
+            Textbook konyv = (Textbook)listKonyv.SelectedItem;
+
+            Order uj = new Order();
+            uj.StudentFk = tanulo2.StudentId;
+            uj.TextbookFk = konyv.TextbookId;
+            context.Order.Local.Add(uj);
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            RendelesListazas();
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            
+            int rendID = Convert.ToInt32(listRendelt.SelectedValue);
+            var trl = from x in context.Order
+                     where x.OrderSk == rendID
+                     select x;
+            context.Order.Remove(trl.FirstOrDefault());
+            context.SaveChanges();
             RendelesListazas();
         }
     }
